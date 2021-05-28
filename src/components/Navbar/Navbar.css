@@ -1,0 +1,13 @@
+.navbar{
+    background: #F71963;
+    height: 50px;
+    padding: 5px 30px;
+}
+
+.return{
+    width: 50px;
+    margin: 15px;
+    position: absolute;
+    left: 7.22%;
+    right: 84.44%;
+}
