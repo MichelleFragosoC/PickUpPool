@@ -15,6 +15,11 @@ const firebaseConfig = {
 const fb = firebase.initializeApp(firebaseConfig);
 const auth = fb.auth();
 const db = fb.firestore();
+const collectionOrders = () => {
+    return db.collection('orders').get();
+}
+const collectionDeliveries = () => {
+    return db.collection('deliveries').get();
+}
 
-
-export {auth, db}
+export {auth, db, collectionOrders, collectionDeliveries}

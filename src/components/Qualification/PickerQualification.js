@@ -1,6 +1,6 @@
 import './PickerQualification.css';
 import Navbar from '../Navbar/Navbar'
-import Stars from '../Qualification/Stars'
+import Stars from '../Qualification/Starts'
 
 const PickerQualification =()=>{
 
