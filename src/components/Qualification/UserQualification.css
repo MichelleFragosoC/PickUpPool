@@ -1,0 +1,38 @@
+.qualificationUser{
+    text-align: center;
+    align-items: center;
+}
+
+.titleCalificacion{
+    font-size: large;
+}
+
+.qualificationContainer{
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.selects{
+    text-align: center;
+}
+
+.comentarios{
+    width: 60%;
+    font-family: 'Mitr', sans-serif;
+}
+
+.buttonUserQualification{
+    margin: 20px;
+}
+
+.btnEnviarCalificacion{
+    background: #F71963;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+    margin: 20px;
+}

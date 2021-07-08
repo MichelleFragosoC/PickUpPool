@@ -5,14 +5,14 @@ import './OrderTracking.css'
 import arrow from '../../assets/back.png';
 import MapView from './MapView';
 
-function OrderTracking() {
+function PickerTracking() {
     let history = useHistory();
 
     function handleClick() {
-        history.push('/orders');
+        history.push('/deliveries');
     }
     function handleClic() {
-        history.push('/qualify');
+        history.push('/userqualify');
     }
     return (
         <>
@@ -26,9 +26,9 @@ function OrderTracking() {
                     <MapView />
                 </div>
             </div>
-            <button className='btnTraking' onClick={handleClic}>Paquete recibido</button>
+            <button className='btnTraking' onClick={handleClic}>Paquete entregado</button>
         </>
     );
 }
 
-export default OrderTracking;
+export default PickerTracking;

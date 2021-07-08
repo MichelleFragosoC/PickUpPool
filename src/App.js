@@ -8,11 +8,15 @@ import Principal from './components/Principal/Principal';
 import DetailOrder from './components/Orders/DetailOrder'
 import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
-import { RegisterPicker } from './components/Register/RegisterPicker'
+import { RegisterPicker } from './components/Register/RegisterPicker';
 import { PickerCancel } from './components/Cancel/PickerCancel';
 import PickerQualification from './components/Qualification/PickerQualification';
 import { PickerProfile } from './components/Profile/PickerProfile';
 import { FormNewPicker } from './components/FormNewPicker/FormNewPicker';
+import OrderTracking from './components/OrderTracking/OrderTracking';
+import { UserQualification } from './components/Qualification/UserQualification';
+import { UserProfile } from './components/Profile/UserProfile';
+import PickerTracking from './components/OrderTracking/PickerTracking';
 
 function App() {
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
@@ -64,6 +68,18 @@ function App() {
           </Route>
           <Route path='/newPicker'>
             <FormNewPicker user={user} />
+          </Route>
+          <Route path='/tracking'>
+            <OrderTracking />
+          </Route>
+          <Route path='/userProfile'>
+            <UserProfile />
+          </Route>
+          <Route path='/userqualify'>
+            <UserQualification />
+          </Route>
+          <Route path='/pickertracking'>
+            <PickerTracking />
           </Route>
         </Switch>
       </div>
