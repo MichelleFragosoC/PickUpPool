@@ -8,14 +8,14 @@ Pickup Pool es una App con la que los clientes podrán cambiar o establecer si a
 
 Un cliente realiza una compra en línea y elige el método de pickup, sin embargo puede darse cuenta que es mejor que alguien más pase por él y se lo puede acercar a un punto de referencia, a través de la App hace el cambio de quien lo va a recoger y selecciona el punto de referencia para recibir su paquete.
 
-* ●	El cliente podrá ver en todo momento los datos de picker para poder contactarlo en cualquier momento.
-●	El cliente podrá elegir la hora y el punto en donde podría recoger su pedido.
-●	El cliente podrá evaluar la entrega:
-        ○	Puntualidad.
-        ○	Estado del paquete.
+* El cliente podrá ver en todo momento los datos de picker para poder contactarlo en cualquier momento.
+* El cliente podrá elegir la hora y el punto en donde podría recoger su pedido.
+* El cliente podrá evaluar la entrega:
+        **	Puntualidad.
+        **	Estado del paquete.
         ○	Servicio. 
-●	El cliente podrá recibir puntos a través de la recomendación de uso de la App que podrá cambiar por créditos para pagar el servicio.
-●	Podrá elegir su método de pago.
+* El cliente podrá recibir puntos a través de la recomendación de uso de la App que podrá cambiar por créditos para pagar el servicio.
+* Podrá elegir su método de pago.
 
 
 ### Caso 2
