@@ -8,14 +8,17 @@ export const FormNewPicker = () =>{
     let history = useHistory();
 
     function handleClick() {
-        history.push('/pickerProfile');
+        history.push('/orders');
+    }
+    function handleClic() {
+        history.push('/tracking');
     }
     return (
         <>
         <Navbar />
         <img onClick={handleClick} src={arrow} className="return" alt="return" />
         <div className="newPicker">
-        <p>Reasignar Picker</p>
+        <p>Asignar Picker</p>
         <form className="formPicker">
             <label htmlFor="text" className="labelOne">Nombre completo:*</label>
             <input className="inputPicker"></input>
@@ -23,7 +26,7 @@ export const FormNewPicker = () =>{
             <input className="inputPicker"></input>
             <label htmlFor="text" className="labelThree">ID del Pedido:*</label>
             <input className="inputPicker"></input>
-            <button className="buttonNewPicker">CONFIRMAR CAMBIO PICKER</button>
+            <button className="buttonNewPicker" onClick={handleClic}>Confirmar Picker</button>
         </form>
         </div>
         </>

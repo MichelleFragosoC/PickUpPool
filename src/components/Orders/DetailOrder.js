@@ -1,10 +1,10 @@
+import React, {useState} from 'react';
 import { useHistory } from 'react-router-dom'
 import './DetailOrder.css';
 import Navbar from '../Navbar/Navbar'
-import swal from 'sweetalert2-react';
+import swal from 'sweetalert';
 import arrow from '../../assets/back.png';
-
-
+import { db } from '../../firebase';
 
 const DetailOrder =()=>{
 
@@ -14,13 +14,31 @@ const DetailOrder =()=>{
         history.push('/orders');
     }
 
-    function handleClic() {
-        history.push('/pickerProfile');
-    }
+    const [hours, setHours] = useState('');
+    const [places, setPlaces] = useState('');
 
-    const alertSuccess =()=>{
-        swal('Pedido programado','¡La información de tu entrega ha sido guardada exitosamente!', 'success');
-    }
+    const scheduleOrder = async (e) =>{
+        e.preventDefault();
+        const saveOrder = {
+            hours: hours,
+            places: places
+        };
+        try{
+            await db.collection('orders').doc(id).update(saveOrder);
+            swal('Pedido programado','¡La información de tu entrega ha sido guardada exitosamente!', 'success');
+            history.push({
+                pathname: `/pickerProfile`,
+                search: `?id=${id}`
+                });
+            console.log('Programando entrega');
+        }
+        catch(error){
+            console.log('Datos no guardados', error);
+        }
+    };
+
+    const queryParams = new URLSearchParams(window.location.search);
+    const id = queryParams.get('id');
 
     return(
         <div className='viewPrincipal'>
@@ -30,11 +48,12 @@ const DetailOrder =()=>{
                 <div className="my-orders">
                     <p>Mis pedidos</p>
                 </div>
-                <section>   
-                    <form className="container-orders" onSubmit={()=>alertSuccess()}>
+                <section> 
+                    <form className="container-orders" onSubmit={scheduleOrder}>
                         <div className='hours'>
+                        <p>Guía de rastreo: {id}</p>
                             <p>Hora de entrega:</p>
-                            <select required>
+                            <select value={hours} onChange={(e) => {setHours(e.target.value)}} required>
                                 <option></option>
                                 <option >10:00</option>
                                 <option >10:30</option>
@@ -59,7 +78,7 @@ const DetailOrder =()=>{
                         </div>
                         <div className='delivery-point'>
                             <p>Punto de entrega:</p>
-                            <select required>
+                            <select value={places} onChange={(e) => {setPlaces(e.target.value)}} required>
                                 <option></option>
                                 <option >Ángel de la Independencia</option>
                                 <option >Hemiciclo a Benito Juárez</option>
@@ -73,7 +92,7 @@ const DetailOrder =()=>{
                             </select>
                         </div>
                         <div className='confirm'>
-                            <input type="submit" value="Confirmar Pickeo" onClick={handleClic} />
+                            <input type="submit" value="Confirmar Pickeo"/>
                         </div>
                     </form>
                 </section>

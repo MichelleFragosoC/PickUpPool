@@ -5,39 +5,42 @@ import { useHistory } from 'react-router-dom'
 
 function OneOrder() {
     const [createN, setCreate] = useState([]);
-    // const [selectedOrder, setSelectedOrder] = useState(null);
     let history = useHistory();
 
-    function handleClick() {
-        history.push('/details');
-    }
-
     useEffect(() => {
-        const getNotes = async () => {
+        const getOrders = async () => {
             const { docs } = await collectionOrders()
             const newArray = docs.map((item) => ({ id: item.id, ...item.data() }))
+            console.log(newArray);
             setCreate(newArray)
         }
-        getNotes()
+        getOrders()
     }, []);
 
+    const goToOrderDetail = async (id) => {
+            history.push({
+                pathname: `/details`,
+                search: `?id=${id}`,
+            })
+    }
     return (
         <>
-            <div onClick={handleClick}  className="ordersDad">
+            <div className="ordersDad">
             {
                 createN.length !== 0 ? (
                     createN.map((item) => (
                         
-                        <span className="ordersBoy" key={item.id}>
-                            <p>Id: {item.numOrden}</p>
+                        <li className="ordersBoy" key={item.id}>
+                            <p>Numero de orden: {item.numOrden}</p>
                             <p>Fecha de entrega: {item.entrega}</p>
-                        </span>     
+                            <button  className='btn-details' onClick={(id)=>{goToOrderDetail(item.id)}}>Programar entrega</button>
+                        </li>     
                     ))
                     ) : (
                         <span>No existen ordenes</span>
                         )
             }
-            </div>
+            </div> 
         </>
     );
 }

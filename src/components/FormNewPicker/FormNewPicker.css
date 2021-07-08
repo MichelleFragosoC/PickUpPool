@@ -6,7 +6,6 @@
 }
 .newPicker p{
     font-size:large;
-    /* margin-left: -180px; */
 }
 .formPicker{
     display: flex;
@@ -15,7 +14,6 @@
     align-items: center;
     width: 90%;
     height: 444px;
-    margin-top: 19px;
     border: solid 1.5px #717786 ;
     border-radius: 5px 5px;
 }
@@ -39,13 +37,11 @@
     margin-top: 13px;
 }
 .buttonNewPicker{
-    width: 54%;
-    height: 42px;
-    background-color: #F71963;
+    background: #F71963;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
     color: white;
-    border-radius: 12px 12px;
-    text-align: center;
-    margin-top: 38px;
-    border: none;
-    box-shadow: 0.5px 2.5px #a1a8b3
+    font-family: 'Mitr', sans-serif;
+    margin: 30px;
 }

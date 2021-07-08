@@ -9,8 +9,8 @@ const Principal =(props)=>{
     function handleClick() {
         history.push('/orders');        
     }
-    function clickDeliveries() {
-        history.push('/deliveries');        
+    function clickRegisterPicker() {
+        history.push('/registerpicker');        
     }
     if(!props.user){
         return <Redirect to="/"/>
@@ -32,7 +32,7 @@ const Principal =(props)=>{
                 </div>
                 <div className='container'>
                     <h4>Vuélvete un Picker y gana</h4>
-                    <button onClick={clickDeliveries} >Unirme</button>
+                    <button onClick={clickRegisterPicker} >Unirme</button>
                 </div>
             </div>
         </div>

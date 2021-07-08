@@ -12,7 +12,7 @@ function UserOrders() {
     function handleClick() {
         history.push('/principal');
     }
-    
+
     return (
         <>
             <Navbar />

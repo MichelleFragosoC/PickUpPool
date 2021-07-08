@@ -1,0 +1,40 @@
+.userProfile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.titles{
+    font-size: larger;
+}
+.profileUser {
+    width: 80%;
+    height: 490px;
+    border: solid 1.5px #A1A8B3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.letters{
+
+    width: 100%;
+    font-size: 14px;
+    text-align: initial;
+    margin-left: 39px;
+}
+.maps{
+    background: #F71963;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+    margin-top: 23px;
+    margin-bottom: 25px;
+}
+.cancelationLink{
+    margin-right: -80px;
+    color: #F71963;
+}
