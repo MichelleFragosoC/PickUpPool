@@ -60,7 +60,7 @@ El cliente tendrá la opción de establecer su punto de recolección de preferen
 ## 🚀 Instalación
 1. Clona este proyecto.
 2. Ve a la carpeta del proyecto
-`cd total-look`
+`cd pickUpPool`
 3. Instala las dependencias
 `npm install`
 4. Corre el ambiente local
