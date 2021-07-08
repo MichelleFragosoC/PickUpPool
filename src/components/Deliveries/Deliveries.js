@@ -48,9 +48,4 @@ function Deliveries() {
     );
 }
 
-<<<<<<< HEAD
 export default Deliveries;
-
-=======
-export default Deliveries;
->>>>>>> 8d54751cc0e4d7def42246d13abda56da7e46be9
