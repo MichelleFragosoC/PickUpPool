@@ -2,19 +2,13 @@
 
 Pickup Pool es una App con la que los clientes podrán cambiar o establecer si alguien hará la recolección de su paquete en un punto de recolección establecido por el comercio asociado. Esta App podrá notificar al comercio sobre el cambio de recolección así como permitirá que el cliente pueda recoger su paquete y también paquetes de sus amigos o de otras personas siempre y cuando se convierta en "Picker" y entregarlos en un punto intermedio.
 
-## Available Scripts
+## Cliente
 
-In the project directory, you can run:
+### Caso 1
 
-### `npm start`
+Un cliente hace una compra en línea y elige el método de pickup sin embargo puede darse cuenta que es mejor que alguien más pase por él y se lo puede acercar a un punto de referencia, a través de la App hace el cambio de quien lo va a recoger y selecciona el punto de referencia para recibir su paquete.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
+### Caso 2
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
