@@ -6,59 +6,37 @@ Pickup Pool es una App con la que los clientes podrán cambiar o establecer si a
 
 ### Caso 1
 
-Un cliente hace una compra en línea y elige el método de pickup sin embargo puede darse cuenta que es mejor que alguien más pase por él y se lo puede acercar a un punto de referencia, a través de la App hace el cambio de quien lo va a recoger y selecciona el punto de referencia para recibir su paquete.
+Un cliente realiza una compra en línea y elige el método de pickup, sin embargo puede darse cuenta que es mejor que alguien más pase por él y se lo puede acercar a un punto de referencia, a través de la App hace el cambio de quien lo va a recoger y selecciona el punto de referencia para recibir su paquete.
+
+* ●	El cliente podrá ver en todo momento los datos de picker para poder contactarlo en cualquier momento.
+●	El cliente podrá elegir la hora y el punto en donde podría recoger su pedido.
+●	El cliente podrá evaluar la entrega:
+        ○	Puntualidad.
+        ○	Estado del paquete.
+        ○	Servicio. 
+●	El cliente podrá recibir puntos a través de la recomendación de uso de la App que podrá cambiar por créditos para pagar el servicio.
+●	Podrá elegir su método de pago.
+
 
 ### Caso 2
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El cliente podrá ser un picker a través de la misma App y recolectar pedidos de alguien que no conoce pero que solicita el servicio o de alguien de entre sus contactos.
+Podrá poner como favoritos a sus clientes y avisar que hará una recolección cercana.
+El cliente tendrá la opción de establecer su punto de recolección de preferencia o el más cercano a su elección.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Picker
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+mizes the build for
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Caso 1
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Caso 2
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Comercio/Establecimiento/Tienda
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Caso 1
+1.	El comercio recibirá la instrucción de cambio de recolector.
+2.	Le notificará al cliente que hizo la compra sobre el cambio de recolector.
