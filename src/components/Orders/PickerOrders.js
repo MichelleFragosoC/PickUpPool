@@ -1,21 +1,31 @@
+import { useHistory } from 'react-router-dom'
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Deliveries from '../Deliveries/Deliveries'
-import './PickerOrders.css'
+import arrow from '../../assets/back.png';
+import '../Deliveries/Deliveries.css';
 
 function PickerOrders() {
-    
+    let history = useHistory();
+
+    function handleClick() {
+        history.push('/principal');
+    }
+
     return (
         <>
             <Navbar />
+            
             <div className='conteiner-pickerorders'>
-                <h1>Entregas</h1>
-                    <div className="conteiner-orders">
+                <p>Entregas</p>
+                    <div className="conteiner-deliveries">
                         <Deliveries />
                     </div>
+                    <img onClick={handleClick} src={arrow} className="return" alt="return" />
             </div>
         </>
     );
+
 }
 
 export default PickerOrders;

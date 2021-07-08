@@ -1,0 +1,47 @@
+.newPicker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.newPicker p{
+    font-size:large;
+}
+.formPicker{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 444px;
+    border: solid 1.5px #717786 ;
+    border-radius: 5px 5px;
+}
+.inputPicker{
+    width: 70%;
+    height: 20px;
+    background-color: #FFF3F6;
+    border: solid 1px #717786 ;
+    border-radius: 5px 5px;
+    margin: 10px;
+}
+.labelOne {
+    margin-right: 77px;
+}
+.labelTwo{
+    margin-right: 69px;
+    margin-top: 13px;
+}
+.labelThree {
+    margin-right: 111px;
+    margin-top: 13px;
+}
+.buttonNewPicker{
+    background: #F71963;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+    margin: 30px;
+}

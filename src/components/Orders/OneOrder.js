@@ -1,43 +1,46 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import { collectionOrders } from '../../firebase'
 import './UserOrders.css'
 import { useHistory } from 'react-router-dom'
 
 function OneOrder() {
+    const [createN, setCreate] = useState([]);
     let history = useHistory();
 
-    function handleClick() {
-        history.push('/details');
-    }
-    const [createN, setCreate] = useState([]);
-
-    React.useEffect(() => {
-        const getNotes = async () => {
+    useEffect(() => {
+        const getOrders = async () => {
             const { docs } = await collectionOrders()
             const newArray = docs.map((item) => ({ id: item.id, ...item.data() }))
+            console.log(newArray);
             setCreate(newArray)
         }
-        getNotes()
-    }, [])
+        getOrders()
+    }, []);
 
+    const goToOrderDetail = async (id) => {
+            history.push({
+                pathname: `/details`,
+                search: `?id=${id}`,
+            })
+    }
     return (
         <>
-            <div onClick={handleClick} className="ordersDad">
+            <div className="ordersDad">
             {
                 createN.length !== 0 ? (
                     createN.map((item) => (
                         
-                        <span className="ordersBoy" key={item.id}>
-                            <p>Id: {item.numOrden}</p>
-                            <p>Tamaño: {item.tamaño}</p>
-                        </span>
-                                    
+                        <li className="ordersBoy" key={item.id}>
+                            <p>Numero de orden: {item.numOrden}</p>
+                            <p>Fecha de entrega: {item.entrega}</p>
+                            <button  className='btn-details' onClick={(id)=>{goToOrderDetail(item.id)}}>Programar entrega</button>
+                        </li>     
                     ))
                     ) : (
                         <span>No existen ordenes</span>
                         )
             }
-            </div>
+            </div> 
         </>
     );
 }

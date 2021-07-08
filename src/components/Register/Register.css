@@ -7,11 +7,9 @@
     align-items: center;
     color: #142032;
 }
-
 h1{
     margin-bottom: 5px;
 }
-
 .register p{
     font-weight: bold;
     margin-top: -18px;
@@ -43,7 +41,6 @@ h1{
     margin-bottom: 7px;
 }
 .registerInput{
-    background-color: #FFF3F6;
     height: 23px;
     width: 85%;
     margin-bottom: 26px;
@@ -51,20 +48,17 @@ h1{
     border: solid 1px #717786;
 }
 .registerButton{
-    background-color: #F71963;
+    background: #F71963;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
     color: white;
-    outline: none;
-    width: 42%;
-    height: 43px;
-    border-radius: 15px 15px;
-    font-size: larger;
-    text-align: center;
+    font-family: 'Mitr', sans-serif;
+    margin-bottom: 30px;
 }
-
 .arrowBack{
     width: 30px;
     margin: 0 15px;
     position: absolute;
     left: 7.22%;
-    /* right: 84.44%; */
 }

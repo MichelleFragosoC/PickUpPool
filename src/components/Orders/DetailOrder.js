@@ -1,31 +1,59 @@
+import React, {useState} from 'react';
+import { useHistory } from 'react-router-dom'
 import './DetailOrder.css';
 import Navbar from '../Navbar/Navbar'
-import { useHistory } from 'react-router-dom'
-import OneOrder from './OneOrder'
+import swal from 'sweetalert';
+import arrow from '../../assets/back.png';
+import { db } from '../../firebase';
 
 const DetailOrder =()=>{
-    
+
     let history = useHistory();
 
     function handleClick() {
-        history.push('/orders');        
+        history.push('/orders');
     }
+
+    const [hours, setHours] = useState('');
+    const [places, setPlaces] = useState('');
+
+    const scheduleOrder = async (e) =>{
+        e.preventDefault();
+        const saveOrder = {
+            hours: hours,
+            places: places
+        };
+        try{
+            await db.collection('orders').doc(id).update(saveOrder);
+            swal('Pedido programado','¡La información de tu entrega ha sido guardada exitosamente!', 'success');
+            history.push({
+                pathname: `/pickerProfile`,
+                search: `?id=${id}`
+                });
+            console.log('Programando entrega');
+        }
+        catch(error){
+            console.log('Datos no guardados', error);
+        }
+    };
+
+    const queryParams = new URLSearchParams(window.location.search);
+    const id = queryParams.get('id');
 
     return(
         <div className='viewPrincipal'>
             <Navbar/>
+            <img onClick={handleClick} src={arrow} className="return" alt="return" />
             <div className='conteiner-userorders'>
                 <div className="my-orders">
-                    <h2>Mis pedidos</h2>
+                    <p>Mis pedidos</p>
                 </div>
-                <section>
-                    <div className="conteiner-orders selector">
-                        <div>
-                            <OneOrder />
-                        </div>
+                <section> 
+                    <form className="container-orders" onSubmit={scheduleOrder}>
                         <div className='hours'>
+                        <p>Guía de rastreo: {id}</p>
                             <p>Hora de entrega:</p>
-                            <select>
+                            <select value={hours} onChange={(e) => {setHours(e.target.value)}} required>
                                 <option></option>
                                 <option >10:00</option>
                                 <option >10:30</option>
@@ -50,26 +78,23 @@ const DetailOrder =()=>{
                         </div>
                         <div className='delivery-point'>
                             <p>Punto de entrega:</p>
-                            <select>
+                            <select value={places} onChange={(e) => {setPlaces(e.target.value)}} required>
                                 <option></option>
                                 <option >Ángel de la Independencia</option>
-                                <option >Monumento a la Raza</option>
-                                <option >Zócalo</option>
-                                <option >Plaza Garibaldi</option>
-                                <option >Templo Mayor</option>
-                                <option >Plaza de las Tres Culturas</option>
-                                <option >Monumento a la Revolución</option>
-                                <option >Torre Latino</option>
                                 <option >Hemiciclo a Benito Juárez</option>
-                                <option >Kiosco Morisco</option>
                                 <option >Palacio de Bellas Artes</option>
                                 <option >Palacio de Correos</option>
+                                <option >Plaza Garibaldi</option>
+                                <option >Monumento a la Revolución</option>
+                                <option >Templo Mayor</option>
+                                <option >Torre Latino</option>
+                                <option >Zócalo</option>
                             </select>
                         </div>
                         <div className='confirm'>
-                            <button>Confirmar Pickeo</button>
+                            <input type="submit" value="Confirmar Pickeo"/>
                         </div>
-                    </div>
+                    </form>
                 </section>
             </div>
         </div>

@@ -2,18 +2,19 @@
     background: #F71963;
     height: 50px;
     padding: 5px 30px;
+    color: white;
 }
-
 .return{
     width: 40px;
     margin: 15px;
-    position: absolute;
+    position: fixed;
     left: 2%;
 }
-
-.navbar p{
-    color: white;
-    right: 10%;
+.sloganApp{
     position: absolute;
-    margin: 12.5px 0;
+    left: 5%;
+}
+.logOut{
+    right: 8%;
+    position: absolute;
 }
