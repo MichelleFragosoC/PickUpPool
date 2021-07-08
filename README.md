@@ -41,7 +41,7 @@ El cliente tendrá la opción de establecer su punto de recolección de preferen
 * El picker establecerá diferentes estatus para la recogida, por ejemplo:
     * Pickeo aceptado.
     * Pickeo en proceso de recolección.
-    * Pcikeo realizado.
+    * Pickeo realizado.
     * Pickeo en camino de entrega
     * Pickeo en espera de ser entregado.
     * Entregado.
