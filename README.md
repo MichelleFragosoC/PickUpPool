@@ -11,9 +11,9 @@ Un cliente realiza una compra en línea y elige el método de pickup, sin embarg
 * El cliente podrá ver en todo momento los datos de picker para poder contactarlo en cualquier momento.
 * El cliente podrá elegir la hora y el punto en donde podría recoger su pedido.
 * El cliente podrá evaluar la entrega:
-        --	Puntualidad.
-        --	Estado del paquete.
-        ○	Servicio. 
+    * --	Puntualidad.
+    * --	Estado del paquete.
+    * ○	Servicio. 
 * El cliente podrá recibir puntos a través de la recomendación de uso de la App que podrá cambiar por créditos para pagar el servicio.
 * Podrá elegir su método de pago.
 * El cliente en todo momento podrá visualizar el estatus de su paquete.
@@ -33,10 +33,6 @@ El cliente tendrá la opción de establecer su punto de recolección de preferen
 * Establecer un horario y zona para recoger paquetes en diferentes tiendas y también establecer horarios y puntos de entrega.
 * El Picker podrá aceptar o rechazar las órdenes que se le muestren en su App.
 * El picker establecerá diferentes estatus para la recogida, por ejemplo:
-
-
-### Caso 2
-
 
 ## Comercio/Establecimiento/Tienda
 
