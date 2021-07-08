@@ -5,7 +5,6 @@ import Logo from '../../LogoPickUp.png'
 import {Link} from 'react-router-dom'
 import { Redirect } from 'react-router';
 
-
 export const Login = (props) => {
     const initialInputs = { //Valor inicial del estado
         email: '',
@@ -28,15 +27,15 @@ export const Login = (props) => {
     return (
         <div className="login">
             <h1>PickUp PooL</h1>
-                    <p>Tu app de entrega de pedidos</p>
+                    <p className="slogan">Tu app de entrega de pedidos</p>
                     <img className="logo" src={Logo} alt="logo" />
                     <div className="loginDivForm">
                     <h3>INICIA SESIÓN</h3>
                         <form className="loginForm"onSubmit={handleSubmit}> 
                         <label htmlFor="email">Correo electrónico*</label>
-                        <input id="email" type="email" className="loginInput"value={inputs.email} onChange={handleOnChange} placeholder="Correo electrónico"/>
+                        <input id="email" type="email" className="loginIn"value={inputs.email} onChange={handleOnChange} placeholder="Correo electrónico"/>
                         <label htmlFor="password">Contraseña*</label>
-                        <input id="password" type="password" className="loginInput" value={inputs.password} onChange={handleOnChange} placeholder="Contraseña"/>
+                        <input id="password" type="password" className="loginIn" value={inputs.password} onChange={handleOnChange} placeholder="Contraseña"/>
                         <input type="submit" value="Ingresar" className="loginButton" />
                     </form>
                     <p>¿Aún no tienes cuenta?</p>
@@ -45,4 +44,3 @@ export const Login = (props) => {
             </div>
     )
 };
-

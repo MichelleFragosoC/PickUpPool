@@ -4,19 +4,16 @@
     padding: 5px 30px;
     color: white;
 }
-
 .return{
     width: 40px;
     margin: 15px;
     position: fixed;
     left: 2%;
 }
-
-.slogan{
+.sloganApp{
     position: absolute;
     left: 5%;
 }
-
 .logOut{
     right: 8%;
     position: absolute;

@@ -4,7 +4,6 @@
     align-items: center;
     width: 100%;
 }
-
 .conteiner-orders {
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@
     border-radius: 5px;
     margin-top: 4px;
 }
-
 .conteiner-userorders h1{
     margin: 0px;
 }
@@ -28,7 +26,6 @@
     align-items: center;
     flex-direction: column;
 }
-
 .ordersBoy {
     display: flex;
     flex-direction: column;
@@ -41,7 +38,6 @@
     border-radius: 5px;
     margin-top: 13px;
 }
-
 .ordersBoy p {
     font-size: small;
     margin: 0px;

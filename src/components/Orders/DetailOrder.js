@@ -6,8 +6,6 @@ import swal from 'sweetalert';
 import arrow from '../../assets/back.png';
 import { db } from '../../firebase';
 
-
-
 const DetailOrder =()=>{
 
     let history = useHistory();
@@ -26,9 +24,12 @@ const DetailOrder =()=>{
             places: places
         };
         try{
-            await db.collection('schedule').add(saveOrder);
+            await db.collection('orders').doc(id).update(saveOrder);
             swal('Pedido programado','¡La información de tu entrega ha sido guardada exitosamente!', 'success');
-            history.push('/pickerProfile');
+            history.push({
+                pathname: `/pickerProfile`,
+                search: `?id=${id}`
+                });
             console.log('Programando entrega');
         }
         catch(error){
@@ -39,8 +40,6 @@ const DetailOrder =()=>{
     const queryParams = new URLSearchParams(window.location.search);
     const id = queryParams.get('id');
 
-
-
     return(
         <div className='viewPrincipal'>
             <Navbar/>
@@ -48,11 +47,11 @@ const DetailOrder =()=>{
             <div className='conteiner-userorders'>
                 <div className="my-orders">
                     <p>Mis pedidos</p>
-                    <p>Id: {id}</p>
                 </div>
                 <section> 
                     <form className="container-orders" onSubmit={scheduleOrder}>
                         <div className='hours'>
+                        <p>Guía de rastreo: {id}</p>
                             <p>Hora de entrega:</p>
                             <select value={hours} onChange={(e) => {setHours(e.target.value)}} required>
                                 <option></option>

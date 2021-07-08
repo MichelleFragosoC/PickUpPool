@@ -9,7 +9,7 @@
 
 .titleCancel{
     font-size: large;
-    width: 90%;
+    width: 60%;
 }
 
 .buttonCancel{
@@ -59,14 +59,15 @@
     font-family: 'Mitr', sans-serif;
 }
 
-.buttonCancel p{
-    margin-bottom: 1px;
+.btnhoover:hover{
+    background-color: #F71963;
 }
 
 .buttonCancel textarea{
     width: 68%;
     height: 90px;
     border: solid 1px #717786;
+    font-family: 'Mitr', sans-serif;
 }
 
 .enviar{

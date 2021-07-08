@@ -25,7 +25,7 @@ const collectionOrders = () => {
 }
 
 const collectionDeliveries = () => {
-    return db.collection('deliveries').get();
+    return db.collection('orders').get();
 }
 
 export {auth, db, collectionOrders, collectionDeliveries, database}

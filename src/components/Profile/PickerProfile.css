@@ -5,14 +5,34 @@
     align-items: center;
 
 }
-.pickerProfile p{
-    /* margin-left: -180px; */
+.title{
     font-size: larger;
 }
 .profile {
     width: 80%;
     height: 490px;
     border: solid 1.5px #A1A8B3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.letter{
+
+    width: 100%;
+    font-size: 14px;
+    text-align: initial;
+    margin-left: 39px;
+}
+.mapas{
+    background: #F71963;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+    margin-top: 23px;
+    margin-bottom: 25px;
 }
 .profileLink{
     margin-right: -80px;

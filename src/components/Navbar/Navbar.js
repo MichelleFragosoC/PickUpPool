@@ -9,15 +9,14 @@ const Navbar =()=>{
     function handleClickPrincipal() {
         history.push('/principal');
     }
-  
+
     function handleLogout() {
         auth.signOut().then(() => console.log("Salir"));
     }
 
-
     return(
         <div className='navbar'>
-            <p className='slogan' onClick={handleClickPrincipal}>PickUp PooL</p>
+            <p className='sloganApp' onClick={handleClickPrincipal}>PickUp PooL</p>
             <ul className='logOut' onClick={handleLogout}>Salir</ul>       
         </div>
     )

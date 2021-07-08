@@ -12,16 +12,16 @@ function PickerOrders() {
         history.push('/principal');
     }
 
-    
     return (
         <>
             <Navbar />
-            <img onClick={handleClick} src={arrow} className="return" alt="return" />
+            
             <div className='conteiner-pickerorders'>
                 <p>Entregas</p>
                     <div className="conteiner-deliveries">
                         <Deliveries />
                     </div>
+                    <img onClick={handleClick} src={arrow} className="return" alt="return" />
             </div>
         </>
     );

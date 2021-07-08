@@ -7,7 +7,6 @@ import arrow from '../../assets/back.png'
 import { Redirect } from 'react-router';
 import swal from 'sweetalert';
 
-
 export const Register = (props) => {
 
     const[email, setEmail] = useState('')
@@ -27,7 +26,6 @@ export const Register = (props) => {
                 });
                 console.log(usersRef);
                 alertSuccess();
-                // alert('Usuario registrado')
             })
             .catch(error => {
                 if(error.code === 'auth/invalid-email'){
