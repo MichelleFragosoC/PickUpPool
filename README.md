@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Pick Up Pool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pickup Pool es una App con la que los clientes podrán cambiar o establecer si alguien hará la recolección de su paquete en un punto de recolección establecido por el comercio asociado. Esta App podrá notificar al comercio sobre el cambio de recolección así como permitirá que el cliente pueda recoger su paquete y también paquetes de sus amigos o de otras personas siempre y cuando se convierta en "Picker" y entregarlos en un punto intermedio.
 
 ## Available Scripts
 
