@@ -55,3 +55,13 @@ El cliente tendrá la opción de establecer su punto de recolección de preferen
 ### Caso 1
 1.	El comercio recibirá la instrucción de cambio de recolector.
 2.	Le notificará al cliente que hizo la compra sobre el cambio de recolector.
+
+
+## 🚀 Instalación
+1. Clona este proyecto.
+2. Ve a la carpeta del proyecto
+`cd total-look`
+3. Instala las dependencias
+`npm install`
+4. Corre el ambiente local
+`npm start`
